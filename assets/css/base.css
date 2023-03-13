@@ -1,0 +1,275 @@
+:root{
+    --primary-color:rgb(3,68,143);
+    --white-color: white;
+    --black-color: #000;
+    --text-color: #333;
+    --boder-color: #dbdbdb;
+    --start-gold: #FFCE3E;
+
+    /* chiều cao của header */
+    --header-height:50px;
+    /* đặt chiều cao nav  */
+    --navbar-height: 5  0px;
+    /* chiều cao của search */
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* responsive */
+.grid{
+    /* mà hình kích thước > 1200 thì kích thước tối đa chỉ 1200 */
+    width: 1080px;
+    /* kích thước nhỏ hơn 1200 thì làm kích thước vừa màn hình  */
+    max-width: 100%;
+    /* căn giữa khối này nằm trong khối khác */
+    margin: 0 auto;
+}
+
+.grid_full-width{
+    width: 100%;
+}
+
+.grid_row{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5x;
+}
+
+/* test */
+.grid_col-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width:16.6667%;
+}
+
+.grid_col-3{
+    padding-left: 5px;
+    padding-right: 5px;
+    width:33.3334%;
+}
+
+.grid_col-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width:25%;
+}
+
+.grid_col-6{
+    padding-left: 5px;
+    padding-right: 5px;
+    width:50%;
+}
+
+.grid_column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width:calc((2/10) * 100%);
+}
+
+/* animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* modal */
+.modal{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: fadeIn linear 1s;
+}
+
+.modal_overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal_body{
+    --growth-from: 0.7;
+    --growth-from: 1;
+    animation: growth linear 0.1s;
+    /* position: relative; */
+    /* thuộc tính nào viết trước có độ ưu tiên cao 
+        nhưng ông nào có thuộc tính z-index cao nhất thì được ưu tiên hơn
+    */
+    z-index: 1;
+    /* background-color: var(--white-color); */
+    margin: auto;
+    font-size: 1.5rem;
+    /* border-radius: 10px; */
+    padding: 0;
+}
+
+/* css đăng ký trở lại */
+.btn{
+    min-width: 124px;
+    text-decoration: none;
+    border-radius: 4px;
+    height: 34px;
+    border: none;
+    padding: 0 12px;
+    font-size: 1.5rem;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: white;
+
+    /* căn giữa icon và chữ */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1.6rem;
+}
+
+.btn.btn-size-s{
+    height: 32px;
+    font-size: 1.3rem;
+    padding: 0 8px;
+}
+
+
+.btn.btn-nomal:hover{
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.btn.btn-primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+/* không bấm vào được */
+.btn-primary-díable{
+    cursor: default;
+    background-color: #999;
+    color: #ccc;
+    /* giảm độ sáng */
+    filter: brightness(80%);
+}
+
+/* css selection */
+.select-input{
+    position: relative;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 3px;
+    min-width: 120px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    min-width: 200px;
+    cursor: pointer;
+}
+
+.select-input-label{
+    font-size: 1.4rem;
+}
+
+/* css giá */
+.select-input_icon{
+    font-size: 1.4rem;
+    color: rgb(131,131,131);
+    /* margin: 0 16px 0 8px;
+    position: relative; */
+    top: 1px;
+}
+
+.select-input:hover .select-input_list{
+    display: block;
+}
+
+.select-input_list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 22px;
+    border-radius: 3px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+}
+
+.select-input_link{
+    display: block;
+    padding: 4px 0;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+.select-input_link:hover{
+    color: var(--primary-color);
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-item{
+    margin: 0 8px;;
+}
+
+.pagination-item-active .pagination-item_link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+} 
+
+.pagination-item-active .pagination-item_link:hover{
+    background-color: #ed5c3f;
+}
+
+.pagination-item_link{
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 3px;
+}
+
+.pagination-item_icon{
+
+}

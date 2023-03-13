@@ -1,0 +1,541 @@
+.header{
+    /* background-image: linear-gradient(0, #eee4e0, #edebeb); */
+    /* background-color: var( --white-color); */
+    background-color: antiquewhite;
+    height: var(--header-height);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    /* height: 120px; */
+}
+.header_navbar{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* chiều cao của header nav */
+    height: var(--navbar-height);
+}
+.header_navbar-logo{
+    display: inline-block;
+    width: 200px;
+    margin-left: 12px;
+}
+
+.header_navbar-logo-img{
+    width: 150px;
+}
+.header_navbar-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_navbar-item{
+    list-style-type: none;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.header_navbar-item-link{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-left: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.header_navbar-item-link:hover,
+.header_navbar-item-link:hover > i {
+    color: #dd9933!important;
+
+}
+
+.header_navbar-item-link:hover{
+    text-decoration: underline #dd9933 solid ;
+}
+
+.header-select-icon{
+    font-size: 1.2rem;
+    color: #446084;
+    margin: 0 2px;
+    /* của nút down */
+    position: relative;
+    top: -1px;
+}
+
+.header_navbar-item:hover .header_subnav{
+    display: block;
+}
+
+.header_subnav::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -11px;
+    height: 17%;
+    /* background-color: black; */
+}
+
+.header_subnav{
+    display: none;
+    width: 200px;
+    top: 140%;
+    left: 0;
+    position: absolute;
+    background-color: var(--white-color);
+    box-shadow: 1px 1px 15px rgb(0 0 0 / 15%);
+}
+
+.header_subnav-item{
+    list-style-type: none;
+    padding: 10px 9px;
+}
+
+.header_subnav-item:hover{
+    background-color: #ccc;
+}
+
+.header_subnav-item-link{
+    line-height: 20px;
+    display: block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 20px;
+}
+
+.app-slider-img{
+    margin-top:  var(--header-height);
+    height: 400px;
+    width: 100%;
+    display: none;
+    text-decoration: none;
+}
+
+.select{
+
+}
+
+.banner_select{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-top: 5px;
+    /* text */
+    margin-bottom: 10px;
+    filter: grayscale(1); 
+}
+
+.banner_select:hover{
+    filter: grayscale(0); 
+
+    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+}
+
+.banner_select-img{
+    margin: auto;
+    width: 70%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.banner_select-title{
+    margin: auto;
+    font-size: 1.8rem;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+
+.select_content{
+    cursor: default;
+    background-color: #f6f6f6;
+    user-select: none!important;
+}
+
+.content_heading{
+    padding-top: 20px;
+    /* display: flex; */
+    text-align: center;
+    font-weight: 700;
+    line-height: 3.3rem;
+    font-size: 2.56rem;
+    margin: 0 0 12.8px;
+
+}
+.loan_content{
+    display: flex;
+}
+.content_text{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    margin: 0 0 10px;
+}
+.content_desc{
+    margin: 0 0 20px;
+    line-height: 25px;
+    font-size: 1.5rem;
+}
+
+.box_img{
+    width: 164px;
+    padding: 0 30px 30px;
+}
+.loan_content-img{
+    width: 87%;
+    margin: 1.28px 0;
+    line-height: 20px;
+}
+.loan_content_desc{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+.section-title{
+    margin: 0 0 12.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title b{
+    flex: 1;
+    height: 2px;
+    margin-top: 30px;
+    opacity: 0.4;
+    background-color: var(--primary-color);
+}
+
+.section-title-main{
+    text-align: center;
+    line-height: 33.28px;
+    font-size: 2.56rem;
+    font-weight: 700;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.table-wrapper{
+    display: flex;
+    margin-bottom: 55px;
+    /* border-color: var(--primary-color)'' */
+}
+
+.pricing_table{
+    border-radius: 10px;  
+    border: var(--primary-color) solid 2px;  
+    padding: 0 0 15px;
+    margin: 15px 0 0;
+    line-height: 25.6px;
+}
+
+.pricing_table:hover{
+    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    color: #181f22;
+}
+
+.table-wrapper_heading{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 19.2px;
+    padding: 10px 30px;
+    border-bottom: 1px solid #ececec;
+    font-size: 1.8rem;
+}
+
+.pricing_price{
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 38.4px;
+    padding: 14px 45px 0;
+    text-align: center;
+    color: var(--black-color);
+}
+.pricing_desc{
+    padding: 15px 15px 0;
+    line-height: 25px;
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.pricing-table-items{
+    padding: 10px 40px;
+}
+
+.pricing_img{
+    display: block;
+    height: 70px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing_list{
+    /* list-style: none; */
+    text-align: left;
+    margin: 16px 0;
+    line-height: 25.6px;
+
+}
+.pricing_list-item{
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 0 10px 20px;
+}
+.pricing_btn{
+}
+
+.pricing_link{
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 40px;
+}
+
+/* css đối tác tài chính */
+.financial_partner{
+    margin: auto;
+    color: var(--primary-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-align: center;
+}
+/* slieder of img bank */
+.financial{
+    height: 97px;
+    width: 100%;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+}
+.financial_img{
+    height: 67px;
+    width: 100%;  
+}
+
+/* chân trang */
+.footer{
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 4px solid var(--primary-color);
+}
+
+.footer_heading{
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-size: 1.7rem;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.footer_list{
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-item-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 22px;
+    color: #737373;
+    display: block;
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+}
+.footer-item-link:hover{
+    color: var(--primary-color);
+}
+
+.footer-item_icon{
+    font-size: 1.8rem;
+    margin: -1px 8px 0 0;
+}
+
+.footer_download{
+    display: flex;
+}
+
+.footer_download-qr{
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--boder-color);
+}
+
+.footer_download-apps{
+    flex: 1;   
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer_download-app-img{
+    height: 20px;
+   
+}
+.footer_download-app-link{
+    color: transparent;
+    text-decoration: none;
+}
+
+
+.footer_bottom{
+    padding: 8px 0;
+    margin-top: 24px;
+    background-color: #f5f5f5;
+}
+.footer_text{
+    margin: 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #737373;
+}
+
+/* hot line */
+@keyframes zoom{
+    0%{
+        transform:scale(.5);
+        opacity:0
+    }50%{
+        opacity:1
+    }to{
+        opacity:0;
+        transform:scale(1)
+    }
+}
+@keyframes lucidgenzalo{
+    0%{
+        transform:rotate(-25deg)
+    }50%{
+        transform:rotate(25deg)
+    }
+}
+.jscroll-to-top{
+    bottom:100px
+}
+.fcta-zalo-ben-trong-nut svg path{
+    fill:#fff
+}
+.fcta-zalo-vi-tri-nut{
+    position:fixed;
+    bottom:24px;
+    right:20px;
+    z-index:999
+}
+.fcta-zalo-nen-nut,div.fcta-zalo-mess{
+    box-shadow:0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.16)
+}
+.fcta-zalo-nen-nut{
+    width:50px;
+    height:50px;
+    text-align:center;
+    color:#fff;
+    background:#0068ff;
+    border-radius:50%;
+    position:relative
+}
+.fcta-zalo-nen-nut::after,.fcta-zalo-nen-nut::before{
+    content:"";
+    position:absolute;
+    border:1px solid #0068ff;
+    background:#0068ff80;
+    z-index:-1;
+    left:-20px;
+    right:-20px;
+    top:-20px;
+    bottom:-20px;
+    border-radius:50%;
+    animation:zoom 1.9s linear infinite
+}
+.fcta-zalo-nen-nut::after{
+    animation-delay:.4s
+}
+.fcta-zalo-ben-trong-nut,
+.fcta-zalo-ben-trong-nut i{
+    transition:all 1s
+}
+.fcta-zalo-ben-trong-nut{
+    position:absolute;
+    text-align:center;
+    width:60%;
+    height:60%;
+    left:10px;
+    bottom:25px;
+    line-height:70px;
+    font-size:25px;
+    opacity:1
+}
+.fcta-zalo-ben-trong-nut i{
+    animation:lucidgenzalo 1s linear infinite
+}
+.fcta-zalo-nen-nut:hover .fcta-zalo-ben-trong-nut,
+   .fcta-zalo-text{
+       opacity:0
+}
+.fcta-zalo-nen-nut:hover i{
+    transform:scale(.5);
+    transition:all .5s ease-in
+}
+.fcta-zalo-text a{
+    text-decoration:none;
+    color:#fff
+}
+.fcta-zalo-text{
+    position:absolute;
+    top:6px;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:700;
+    transform:scaleX(-1);
+    transition:all .5s;
+    line-height:1.5
+}
+.fcta-zalo-nen-nut:hover .fcta-zalo-text{
+    transform:scaleX(1);
+    opacity:1
+}
+div.fcta-zalo-mess{
+    position:fixed;
+    bottom:29px;
+    right:58px;
+    z-index:99;
+    background:#fff;
+    padding:7px 25px 7px 15px;
+    color:#0068ff;
+    border-radius:50px 0 0 50px;
+    font-weight:700;font-size:15px
+}
+.fcta-zalo-mess span{
+    color:#0068ff!important
+}
+span#fcta-zalo-tracking{
+    font-family:Roboto;
+    line-height:1.5
+}
+.fcta-zalo-text{
+    ont-family:Roboto
+}
+
+
+
